@@ -9,6 +9,7 @@
       <param-value>UTF-8</param-value>
     </init-param>
   </filter> -->
+    printf()
     <filter>
         <filter-name>struts2</filter-name>
         <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>        
