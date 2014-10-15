@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="GBK" />
+	<package name="web" namespace="/" extends="struts-default">
+		<default-action-ref name="index" />
+		<action name="index" class="web.BookAction" method="list">
+			<result name="success">/myindex.jsp</result>
+		</action>
+		<action name="search" class="web.BookAction" method="slist">
+			<result name="success">/search.jsp</result>
+		</action>
+		<action name="add" class="web.BookAction" method="add">
+			<result name="success" >/book-add.jsp</result>
+		</action>
+		<action name="addau" class="web.BookAction" method="addau">
+			<result name="success" >/author-add.jsp</result>
+		</action>
+		<action name="detial" class="web.BookAction" method="updateInput">
+			<result name="input">/detial.jsp</result>
+		</action>
+		<action name="update-input" class="web.BookAction" method="updateInput">
+			<result name="input" >/book-update-input.jsp</result>
+		</action>
+		<action name="update" class="web.BookAction" method="update">
+			<result name="success" >/book-update.jsp</result>
+		</action>
+		<action name="delete" class="web.BookAction" method="delete">
+			<result name="success">/book-delete.jsp</result>
+	   </action>
+    </package>
+</struts>    
